@@ -1,0 +1,178 @@
+<definitions xmlns:tns="http://localhost80.wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://localhost80.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="CRUD" targetNamespace="http://localhost80.wsdl">
+<!--  definition of datatypes  -->
+<types>
+<schema xmlns="http://www.w3.org/2000/10/XMLSchema" targetNamespace="http://localhost80.xsd">
+<element name="id">
+<complexType>
+<all>
+<element name="value" type="int"/>
+</all>
+</complexType>
+</element>
+<element name="cedula">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+<element name="nombre">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+<element name="direccion">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+<element name="correo">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+<element name="clave">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+<element name="respuesta">
+<complexType>
+<all>
+<element name="value" type="int"/>
+</all>
+</complexType>
+</element>
+<element name="respuesta2">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+<element name="void">
+<complexType>
+<sequence/>
+</complexType>
+</element>
+</schema>
+</types>
+<!--  response messages  -->
+<message name="returns_respuesta">
+<part name="respuesta" type="xsd:respuesta"/>
+</message>
+<message name="returns_respuesta2">
+<part name="respuesta2" type="xsd:respuesta2"/>
+</message>
+<!--  request messages  -->
+<message name="insertar">
+<part name="cedula" type="xsd:cedula"/>
+<part name="nombre" type="xsd:nombre"/>
+<part name="direccion" type="xsd:direccion"/>
+<part name="correo" type="xsd:correo"/>
+<part name="clave" type="xsd:clave"/>
+</message>
+<message name="modificar">
+<part name="id" type="xsd:id"/>
+<part name="cedula" type="xsd:cedula"/>
+<part name="nombre" type="xsd:nombre"/>
+<part name="direccion" type="xsd:direccion"/>
+<part name="correo" type="xsd:correo"/>
+<part name="clave" type="xsd:clave"/>
+</message>
+<message name="eliminar">
+<part name="id" type="xsd:id"/>
+</message>
+<message name="consultarTodos">
+<part name="void" type="xsd:void"/>
+</message>
+<message name="buscarId">
+<part name="id" type="xsd:id"/>
+</message>
+<!--  server's services  -->
+<portType name="CRUD">
+<operation name="insertar">
+<input message="tns:insertar"/>
+<output message="tns:returns_respuesta"/>
+</operation>
+<operation name="modificar">
+<input message="tns:modificar"/>
+<output message="tns:returns_respuesta"/>
+</operation>
+<operation name="eliminar">
+<input message="tns:eliminar"/>
+<output message="tns:returns_respuesta"/>
+</operation>
+<operation name="consultarTodos">
+<input message="tns:consultarTodos"/>
+<output message="tns:returns_respuesta2"/>
+</operation>
+<operation name="buscarId">
+<input message="tns:buscarId"/>
+<output message="tns:returns_respuesta2"/>
+</operation>
+</portType>
+<!--  server encoding  -->
+<binding name="CRUD_webservices" type="tns:CRUD">
+<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="insertar">
+<soap:operation soapAction="urn:xmethods-delayed-quotes#insertar"/>
+<input>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+<operation name="modificar">
+<soap:operation soapAction="urn:xmethods-delayed-quotes#modificar"/>
+<input>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+<operation name="eliminar">
+<soap:operation soapAction="urn:xmethods-delayed-quotes#eliminar"/>
+<input>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+<operation name="consultarTodos">
+<soap:operation soapAction="urn:xmethods-delayed-quotes#consultarTodos"/>
+<input>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+<operation name="buscarId">
+<soap:operation soapAction="urn:xmethods-delayed-quotes#buscarId"/>
+<input>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+</binding>
+<!--  access to service provider  -->
+<service name="clientes">
+<port name="clientes_0" binding="CRUD_webservices">
+<soap:address location="http://localhost:80/ferreteria/server/serverC.php"/>
+</port>
+</service>
+</definitions>

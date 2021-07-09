@@ -1,0 +1,202 @@
+<definitions xmlns:tns="localhost80.wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="localhost80.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="let you post/retrieve online message by SOAP protocol" targetNamespace="localhost80.wsdl">
+<!--  definition of datatypes  -->
+<types>
+<schema xmlns="http://www.w3.org/2000/10/XMLSchema" targetNamespace="localhost80.xsd">
+<element name="id">
+<complexType>
+<all>
+<element name="value" type="int"/>
+</all>
+</complexType>
+</element>
+<element name="nombre">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+<element name="apellido">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+<element name="correo">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+<element name="edad">
+<complexType>
+<all>
+<element name="value" type="int"/>
+</all>
+</complexType>
+</element>
+<element name="res1">
+<complexType>
+<all>
+<element name="value" type="int"/>
+</all>
+</complexType>
+</element>
+<element name="res2">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+<element name="res3">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+<element name="palabra">
+<complexType>
+<all>
+<element name="value" type="string"/>
+</all>
+</complexType>
+</element>
+<element name="void">
+<complexType>
+<sequence/>
+</complexType>
+</element>
+</schema>
+</types>
+<!-- response messages -->
+<message name="returns_res1">
+<part name="res1" type="xsd:res1"/>
+</message>
+<message name="returns_res2">
+<part name="res2" type="xsd:res2"/>
+</message>
+<message name="returns_res3">
+<part name="res3" type="xsd:res3"/>
+</message>
+<!-- request messages -->
+<message name="insertar">
+<part name="nombre" type="xsd:nombre"/>
+<part name="apellido" type="xsd:apellido"/>
+<part name="correo" type="xsd:correo"/>
+<part name="edad" type="xsd:edad"/>
+</message>
+<message name="modificar">
+<part name="id" type="xsd:id"/>
+<part name="nombre" type="xsd:nombre"/>
+<part name="apellido" type="xsd:apellido"/>
+<part name="correo" type="xsd:correo"/>
+<part name="edad" type="xsd:edad"/>
+</message>
+<message name="eliminar">
+<part name="id" type="xsd:id"/>
+</message>
+<message name="consultarTodos">
+<part name="void" type="xsd:void"/>
+</message>
+<message name="buscarId">
+<part name="id" type="xsd:id"/>
+</message>
+<message name="filtro">
+<part name="palabra" type="xsd:palabra"/>
+</message>
+<!-- server's services -->
+<portType name="Starman">
+<operation name="insertar">
+<input message="tns:insertar"/>
+<output message="tns:returns_res1"/>
+</operation>
+<operation name="modificar">
+<input message="tns:modificar"/>
+<output message="tns:returns_res1"/>
+</operation>
+<operation name="eliminar">
+<input message="tns:eliminar"/>
+<output message="tns:returns_res1"/>
+</operation>
+<operation name="consultarTodos">
+<input message="tns:consultarTodos"/>
+<output message="tns:returns_res2"/>
+</operation>
+<operation name="buscarId">
+<input message="tns:buscarId"/>
+<output message="tns:returns_res2"/>
+</operation>
+<operation name="filtro">
+<input message="tns:filtro"/>
+<output message="tns:returns_res3"/>
+</operation>
+</portType>
+<!-- server encoding -->
+<binding name="Starman_webservices" type="tns:Starman">
+<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="insertar">
+<soap:operation soapAction="urn:xmethods-delayed-quotes#insertar"/>
+<input>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+<operation name="modificar">
+<soap:operation soapAction="urn:xmethods-delayed-quotes#modificar"/>
+<input>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+<operation name="eliminar">
+<soap:operation soapAction="urn:xmethods-delayed-quotes#eliminar"/>
+<input>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+<operation name="consultarTodos">
+<soap:operation soapAction="urn:xmethods-delayed-quotes#consultarTodos"/>
+<input>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+<operation name="buscarId">
+<soap:operation soapAction="urn:xmethods-delayed-quotes#buscarId"/>
+<input>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+<operation name="filtro">
+<soap:operation soapAction="urn:xmethods-delayed-quotes#filtro"/>
+<input>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:xmethods-delayed-quotes" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+</binding>
+<!-- access to service provider -->
+<service name="Starman">
+<port name="Starman_0" binding="Starman_webservices">
+<soap:address location="http://localhost/ferreteria/server/server.php"/>
+</port>
+</service>
+</definitions>

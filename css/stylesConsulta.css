@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-image: url('https://i.pinimg.com/originals/34/77/3f/34773f3f633ef6a17b42edbb643f5193.jpg');
+background-size: cover;
+
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+.navbar img{
+	width: 50px;
+	height: 50px;
+}
+
