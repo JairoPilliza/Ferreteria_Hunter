@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Ferreteria Hunter</title>
-      <link rel="stylesheet" type="text/css" href="css/principal5.css">
+      <link rel="stylesheet" type="text/css" href="css/principal6.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -86,6 +86,10 @@
   </aside>
 </section>
 <section class="app2" style="background-image: url(img/logoDetalladoF2.png); background-size: 100% 100%; background-repeat: no-repeat;">
+  <br><br><br><br>
+  <center>
+  
+  <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=2722e5bc-569f-41ba-b467-305e5d2c90c1&autoAuth=true&ctid=e3456cb9-1d2d-4e79-be9a-7a990373fb2b&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXBhYXMtMS1zY3VzLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0LyJ9" frameborder="0" allowFullScreen="true"></iframe>
 </section>
 </body>
 </html>
