@@ -89,7 +89,7 @@
   <br><br><br><br>
   <center>
   
-  <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=2722e5bc-569f-41ba-b467-305e5d2c90c1&autoAuth=true&ctid=e3456cb9-1d2d-4e79-be9a-7a990373fb2b&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXBhYXMtMS1zY3VzLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0LyJ9" frameborder="0" allowFullScreen="true"></iframe>
+  <iframe width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMmQ2M2JjNmEtZjczOC00MjU0LWI4ZTUtNDAyZTBmMjc4ZWJlIiwidCI6ImUzNDU2Y2I5LTFkMmQtNGU3OS1iZTlhLTdhOTkwMzczZmIyYiJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
 </section>
 </body>
 </html>
