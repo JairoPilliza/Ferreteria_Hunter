@@ -92,7 +92,7 @@
   <br><br><br><br>
   <center>
   
-  <iframe width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMmQ2M2JjNmEtZjczOC00MjU0LWI4ZTUtNDAyZTBmMjc4ZWJlIiwidCI6ImUzNDU2Y2I5LTFkMmQtNGU3OS1iZTlhLTdhOTkwMzczZmIyYiJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+  <iframe width="900" height="473.5" src="https://app.powerbi.com/view?r=eyJrIjoiMmQ2M2JjNmEtZjczOC00MjU0LWI4ZTUtNDAyZTBmMjc4ZWJlIiwidCI6ImUzNDU2Y2I5LTFkMmQtNGU3OS1iZTlhLTdhOTkwMzczZmIyYiJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
 </section>
 </body>
 </html>
