@@ -46,7 +46,7 @@
               <a href="clientes/index.php"><i class="fas fa-address-book"></i>Gestion Clientes</a>
             </li>
             <li>
-              <a href="pdf/clientes.php" target="_BLANK"><i class="fas fa-file-pdf"></i>Reportes</a>
+              <a href="pdf/clientes.php" ><i class="fas fa-file-pdf"></i>Reportes</a>
             </li>
           </ul>
         </li>
