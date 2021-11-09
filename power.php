@@ -91,8 +91,7 @@
 <section class="app2" style="background-image: url(img/logoDetalladoF2.png); background-size: 100% 100%; background-repeat: no-repeat;">
   <br><br><br><br>
   <center>
-  
-  <iframe width="900" height="473.5" src="https://app.powerbi.com/view?r=eyJrIjoiMmQ2M2JjNmEtZjczOC00MjU0LWI4ZTUtNDAyZTBmMjc4ZWJlIiwidCI6ImUzNDU2Y2I5LTFkMmQtNGU3OS1iZTlhLTdhOTkwMzczZmIyYiJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+    <iframe width="900" height="473.5" src="https://app.powerbi.com/view?r=eyJrIjoiZmM4OWMzOWYtYTNlOC00ZTc3LTkzN2YtMTYxZmRjZWIyY2I4IiwidCI6ImUzNDU2Y2I5LTFkMmQtNGU3OS1iZTlhLTdhOTkwMzczZmIyYiJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
 </section>
 </body>
 </html>
